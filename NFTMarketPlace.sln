@@ -3,9 +3,92 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F359BE55-7BCE-4FB4-B65F-0CF37FC5C9BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E33CFF33-7587-48DE-8C97-A4ED2DABDDC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C32C6DC6-3DB9-4375-980F-3A8485CC8B5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{A32809E9-AB6D-4BC9-A160-52B556ACA1CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5CF0A489-ECB8-40D8-9A73-BBC309F2CD32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{17BA16A4-D255-4238-BC45-A6ED1A30FC65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Tests", "src\NFTMarketPlace.Tests\NFTMarketPlace.Tests.csproj", "{693CD803-EF08-4189-B355-BADA1C2A9B3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Application", "src\NFTMarketPlace.Application\NFTMarketPlace.Application.csproj", "{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Domain", "src\NFTMarketPlace.Domain\NFTMarketPlace.Domain.csproj", "{8BB64442-BA20-4C5D-90BF-634066955026}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Domain.SeedWork", "src\NFTMarketPlace.Domain.SeedWork\NFTMarketPlace.Domain.SeedWork.csproj", "{BA50EF46-0959-42A9-8E74-C1728673048E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Infrastructure", "src\NFTMarketPlace.Infrastructure\NFTMarketPlace.Infrastructure.csproj", "{250482D8-63CA-4819-87BB-E9C7425112C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Infrastructure.IoC", "src\NFTMarketPlace.Infrastructure.IoC\NFTMarketPlace.Infrastructure.IoC.csproj", "{BA4A6E2F-F799-401C-B6B0-57F80620A69D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.SmartContracts", "src\NFTMarketPlace.SmartContracts\NFTMarketPlace.SmartContracts.csproj", "{9733130E-62F4-4446-B194-7C6DBB752E5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Common", "src\NFTMarketPlace.Common\NFTMarketPlace.Common.csproj", "{12C8B84E-8F6E-4478-9E06-0F344C9434F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.WebAPI", "src\NFTMarketPlace.WebAPI\NFTMarketPlace.WebAPI.csproj", "{8D5F80E3-7582-4327-9083-747621C3D459}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{693CD803-EF08-4189-B355-BADA1C2A9B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693CD803-EF08-4189-B355-BADA1C2A9B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693CD803-EF08-4189-B355-BADA1C2A9B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693CD803-EF08-4189-B355-BADA1C2A9B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB64442-BA20-4C5D-90BF-634066955026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB64442-BA20-4C5D-90BF-634066955026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB64442-BA20-4C5D-90BF-634066955026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB64442-BA20-4C5D-90BF-634066955026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA50EF46-0959-42A9-8E74-C1728673048E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA50EF46-0959-42A9-8E74-C1728673048E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA50EF46-0959-42A9-8E74-C1728673048E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA50EF46-0959-42A9-8E74-C1728673048E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250482D8-63CA-4819-87BB-E9C7425112C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250482D8-63CA-4819-87BB-E9C7425112C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250482D8-63CA-4819-87BB-E9C7425112C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250482D8-63CA-4819-87BB-E9C7425112C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4A6E2F-F799-401C-B6B0-57F80620A69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4A6E2F-F799-401C-B6B0-57F80620A69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4A6E2F-F799-401C-B6B0-57F80620A69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4A6E2F-F799-401C-B6B0-57F80620A69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9733130E-62F4-4446-B194-7C6DBB752E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9733130E-62F4-4446-B194-7C6DBB752E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9733130E-62F4-4446-B194-7C6DBB752E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9733130E-62F4-4446-B194-7C6DBB752E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C8B84E-8F6E-4478-9E06-0F344C9434F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C8B84E-8F6E-4478-9E06-0F344C9434F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C8B84E-8F6E-4478-9E06-0F344C9434F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C8B84E-8F6E-4478-9E06-0F344C9434F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5F80E3-7582-4327-9083-747621C3D459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5F80E3-7582-4327-9083-747621C3D459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5F80E3-7582-4327-9083-747621C3D459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5F80E3-7582-4327-9083-747621C3D459}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{693CD803-EF08-4189-B355-BADA1C2A9B3D} = {17BA16A4-D255-4238-BC45-A6ED1A30FC65}
+		{7836FA23-A8A9-4D7B-B7C9-FDD133DF5122} = {E33CFF33-7587-48DE-8C97-A4ED2DABDDC1}
+		{8BB64442-BA20-4C5D-90BF-634066955026} = {F359BE55-7BCE-4FB4-B65F-0CF37FC5C9BD}
+		{BA50EF46-0959-42A9-8E74-C1728673048E} = {F359BE55-7BCE-4FB4-B65F-0CF37FC5C9BD}
+		{250482D8-63CA-4819-87BB-E9C7425112C7} = {C32C6DC6-3DB9-4375-980F-3A8485CC8B5E}
+		{BA4A6E2F-F799-401C-B6B0-57F80620A69D} = {C32C6DC6-3DB9-4375-980F-3A8485CC8B5E}
+		{9733130E-62F4-4446-B194-7C6DBB752E5E} = {C32C6DC6-3DB9-4375-980F-3A8485CC8B5E}
+		{12C8B84E-8F6E-4478-9E06-0F344C9434F7} = {A32809E9-AB6D-4BC9-A160-52B556ACA1CA}
+		{8D5F80E3-7582-4327-9083-747621C3D459} = {5CF0A489-ECB8-40D8-9A73-BBC309F2CD32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CAEE2BBE-DF4A-44C3-BDC6-4D89CCFF8D5A}
