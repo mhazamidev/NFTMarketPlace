@@ -1,13 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NethereumGenerateCode>true</NethereumGenerateCode>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Contracts\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Nethereum.Autogen.ContractApi" Version="3.6.2" />
+		<PackageReference Include="Nethereum.Contracts" Version="4.20.0" />
+		<PackageReference Include="Nethereum.Web3" Version="4.20.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
 
 </Project>

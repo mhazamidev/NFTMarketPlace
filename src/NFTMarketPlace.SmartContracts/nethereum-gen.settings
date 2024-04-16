@@ -1,0 +1,7 @@
+{
+    "projectName": "NFTMarketPlace.SmartContracts",
+    "namespace": "NFTMarketPlace.SmartContracts.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "../"
+}
