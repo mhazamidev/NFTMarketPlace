@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NFTMarketPlace.Domain.SeedWork\NFTMarketPlace.Domain.SeedWork.csproj" />
+  </ItemGroup>
+
 </Project>

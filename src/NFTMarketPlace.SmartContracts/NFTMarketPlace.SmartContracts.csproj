@@ -8,10 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Contracts\" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Nethereum.Autogen.ContractApi" Version="3.6.2" />
 		<PackageReference Include="Nethereum.Contracts" Version="4.20.0" />
 		<PackageReference Include="Nethereum.Web3" Version="4.20.0" />

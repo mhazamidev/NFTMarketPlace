@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Common", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.WebAPI", "src\NFTMarketPlace.WebAPI\NFTMarketPlace.WebAPI.csproj", "{8D5F80E3-7582-4327-9083-747621C3D459}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFTMarketPlace.WebApp", "src\NFTMarketPlace.WebApp\NFTMarketPlace.WebApp.csproj", "{266E560C-7C37-440E-8E08-BAF0CB863FFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{8D5F80E3-7582-4327-9083-747621C3D459}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D5F80E3-7582-4327-9083-747621C3D459}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D5F80E3-7582-4327-9083-747621C3D459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266E560C-7C37-440E-8E08-BAF0CB863FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266E560C-7C37-440E-8E08-BAF0CB863FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266E560C-7C37-440E-8E08-BAF0CB863FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266E560C-7C37-440E-8E08-BAF0CB863FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +95,7 @@ Global
 		{9733130E-62F4-4446-B194-7C6DBB752E5E} = {C32C6DC6-3DB9-4375-980F-3A8485CC8B5E}
 		{12C8B84E-8F6E-4478-9E06-0F344C9434F7} = {A32809E9-AB6D-4BC9-A160-52B556ACA1CA}
 		{8D5F80E3-7582-4327-9083-747621C3D459} = {5CF0A489-ECB8-40D8-9A73-BBC309F2CD32}
+		{266E560C-7C37-440E-8E08-BAF0CB863FFC} = {5CF0A489-ECB8-40D8-9A73-BBC309F2CD32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CAEE2BBE-DF4A-44C3-BDC6-4D89CCFF8D5A}

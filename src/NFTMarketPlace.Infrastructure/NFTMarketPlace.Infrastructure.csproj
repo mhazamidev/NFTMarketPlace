@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NFTMarketPlace.Domain\NFTMarketPlace.Domain.csproj" />
+    <ProjectReference Include="..\NFTMarketPlace.SmartContracts\NFTMarketPlace.SmartContracts.csproj" />
+  </ItemGroup>
+
 </Project>
