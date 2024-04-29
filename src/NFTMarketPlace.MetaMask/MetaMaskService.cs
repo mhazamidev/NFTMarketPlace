@@ -11,8 +11,6 @@ public class MetaMaskService : IAsyncDisposable, IMetaMaskService
 {
     private readonly Lazy<Task<IJSObjectReference>> moduleTask;
 
-    //public static event Func<Task>? ConnectEvent;
-    //public static event Func<Task>? DisconnectEvent;
 
     public MetaMaskService(IJSRuntime jsRuntime)
     {
@@ -21,8 +19,7 @@ public class MetaMaskService : IAsyncDisposable, IMetaMaskService
 
     public ValueTask<IJSObjectReference> LoadScripts(IJSRuntime jsRuntime)
     {
-        //await jsRuntime.InvokeAsync<IJSObjectReference>("import", "https://cdn.ethers.io/lib/ethers-5.1.0.umd.min.js");
-        return jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/MetaMask.Blazor/metaMaskJsInterop.js");
+        return jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/NFTMarketPlace.MetaMask/metaMaskJsInterop.js");
     }
 
     public async ValueTask ConnectMetaMask()

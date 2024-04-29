@@ -6,7 +6,26 @@
     <title>NFTMarketPlace.WebApp</title>
     <base href="/" />
     <link href="css/app.css" rel="stylesheet" />
-    
+    <script>
+        // set base href dynamically based on hosting location
+        var base = document.createElement('base');
+        var newBase = `${window.location.pathname}`;
+
+        var secondSlash = newBase.indexOf("/", 1);
+        newBase = newBase.substr(0, secondSlash);
+
+        // Ensure initial slash present
+        newBase = (newBase.startsWith("/") ? "" : "/") + newBase;
+        // Ensure trailing slash present
+        newBase += (newBase.endsWith("/") ? "" : "/");
+        base.href = newBase;
+        console.log(`Base href set to ${newBase}`);
+        document.getElementsByTagName('head')[0].appendChild(base);
+    </script>
+
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="MetaMask.Blazor.SampleApp.styles.css" rel="stylesheet" />
+</head>
     <!-- If you add any scoped CSS files, uncomment the following to load them
     <link href="NFTMarketPlace.WebApp.styles.css" rel="stylesheet" /> -->
 </head>
@@ -20,6 +39,27 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        const originalResponseBuffer = await response.arrayBuffer();
+                        const originalResponseArray = new Int8Array(originalResponseBuffer);
+                        const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                        const contentType = type ===
+                            'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressedResponseArray,
+                            { headers: { 'content-type': contentType } });
+                    })();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
