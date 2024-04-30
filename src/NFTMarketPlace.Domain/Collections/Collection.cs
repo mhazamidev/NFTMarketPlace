@@ -19,10 +19,10 @@ public sealed class Collection : AggregateRoot<CollectionId>
     public string Name { get; private set; }
     public DateTime Created { get; private set; }
     public bool IsActive { get; private set; }
-    public FileId FileId { get; private set; }
-    public Files.File Cover { get; private set; }
+    public FileId? FileId { get; private set; }
+    public Files.File? Cover { get; private set; }
 
-    public static Collection CreateNew(Guid id, string name, bool isActive, FileId fileId)
+    public static Collection CreateNew(Guid id, string name, bool isActive, FileId? fileId)
     {
         var collectionId = new CollectionId(id);
         return new Collection(collectionId, name, isActive, fileId);
