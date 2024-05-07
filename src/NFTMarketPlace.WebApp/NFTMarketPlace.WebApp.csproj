@@ -7,15 +7,23 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Mhazami.Utility" Version="1.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.18" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.17" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.17" PrivateAssets="all" />
 		<PackageReference Include="Nethereum.ABI" Version="4.20.0" />
 		<PackageReference Include="Nethereum.Web3" Version="4.20.0" />
 		<PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+		<PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+		<PackageReference Include="Blazored.Toast" Version="4.1.0" />
+		<PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+		<PackageReference Include="FluentValidation" Version="11.9.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\NFTMarketPlace.Common\NFTMarketPlace.Common.csproj" />
 		<ProjectReference Include="..\NFTMarketPlace.MetaMask\NFTMarketPlace.MetaMask.csproj" />
 	</ItemGroup>
 

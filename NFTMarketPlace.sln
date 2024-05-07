@@ -33,9 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.Common", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.WebAPI", "src\NFTMarketPlace.WebAPI\NFTMarketPlace.WebAPI.csproj", "{8D5F80E3-7582-4327-9083-747621C3D459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFTMarketPlace.WebApp", "src\NFTMarketPlace.WebApp\NFTMarketPlace.WebApp.csproj", "{266E560C-7C37-440E-8E08-BAF0CB863FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.WebApp", "src\NFTMarketPlace.WebApp\NFTMarketPlace.WebApp.csproj", "{266E560C-7C37-440E-8E08-BAF0CB863FFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFTMarketPlace.MetaMask", "src\NFTMarketPlace.MetaMask\NFTMarketPlace.MetaMask.csproj", "{11090E46-A4EE-4EC5-9348-352D669F1DC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTMarketPlace.MetaMask", "src\NFTMarketPlace.MetaMask\NFTMarketPlace.MetaMask.csproj", "{11090E46-A4EE-4EC5-9348-352D669F1DC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

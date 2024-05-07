@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Amazon.Lambda;
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using Nethereum.ABI.EIP712;
 using Nethereum.ABI.FunctionEncoding;
 using Nethereum.ABI.Model;
 using NFTMarketPlace.MetaMask;
 using NFTMarketPlace.MetaMask.Enums;
 using NFTMarketPlace.MetaMask.Exceptions;
+using NFTMarketPlace.WebApp.Base;
 using NFTMarketPlace.WebApp.Models;
 using System.Numerics;
 
 namespace NFTMarketPlace.WebApp.Pages;
 
-public partial class Index : IDisposable
+public partial class Index : RazorComponentBase, IDisposable
 {
     [Inject]
     public IMetaMaskService MetaMaskService { get; set; } = default!;
-
+    [Inject] IJSRuntime JS { get; set; }
     public bool HasMetaMask { get; set; }
     public string? SelectedAddress { get; set; }
 
@@ -27,9 +30,12 @@ public partial class Index : IDisposable
     public string? FunctionResult { get; set; }
     public string? RpcResult { get; set; }
     public Chain? Chain { get; set; }
-
+    private IJSObjectReference? module;
     protected override async Task OnInitializedAsync()
     {
+        //module = await JS.InvokeAsync<IJSObjectReference>(
+        //     "import", "./js/tiny-slider.js");
+
         //Subscribe to events
         IMetaMaskService.AccountChangedEvent += MetaMaskService_AccountChangedEvent;
         IMetaMaskService.ChainChangedEvent += MetaMaskService_ChainChangedEvent;
@@ -46,7 +52,16 @@ public partial class Index : IDisposable
             await GetSelectedAddress();
             await GetSelectedNetwork();
         }
+    }
 
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            await JS.InvokeVoidAsync("activeTNS");
+        }
+        await base.OnAfterRenderAsync(firstRender);
     }
 
     private void IMetaMaskService_OnDisconnectEvent()
