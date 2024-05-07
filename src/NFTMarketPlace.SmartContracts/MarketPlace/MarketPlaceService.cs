@@ -1,42 +1,34 @@
-using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.Numerics;
-using Nethereum.Hex.HexTypes;
-using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Web3;
 using Nethereum.RPC.Eth.DTOs;
-using Nethereum.Contracts.CQS;
 using Nethereum.Contracts.ContractHandlers;
-using Nethereum.Contracts;
-using System.Threading;
 using NFTMarketPlace.SmartContracts.MarketPlace.ContractDefinition;
 
 namespace NFTMarketPlace.SmartContracts.MarketPlace
 {
     public partial class MarketPlaceService
     {
-        public static Task<TransactionReceipt> DeployContractAndWaitForReceiptAsync(Nethereum.Web3.Web3 web3, MarketPlaceDeployment marketPlaceDeployment, CancellationTokenSource cancellationTokenSource = null)
+        public static Task<TransactionReceipt> DeployContractAndWaitForReceiptAsync(Web3 web3, MarketPlaceDeployment marketPlaceDeployment, CancellationTokenSource cancellationTokenSource = null)
         {
             return web3.Eth.GetContractDeploymentHandler<MarketPlaceDeployment>().SendRequestAndWaitForReceiptAsync(marketPlaceDeployment, cancellationTokenSource);
         }
 
-        public static Task<string> DeployContractAsync(Nethereum.Web3.Web3 web3, MarketPlaceDeployment marketPlaceDeployment)
+        public static Task<string> DeployContractAsync(Web3 web3, MarketPlaceDeployment marketPlaceDeployment)
         {
             return web3.Eth.GetContractDeploymentHandler<MarketPlaceDeployment>().SendRequestAsync(marketPlaceDeployment);
         }
 
-        public static async Task<MarketPlaceService> DeployContractAndGetServiceAsync(Nethereum.Web3.Web3 web3, MarketPlaceDeployment marketPlaceDeployment, CancellationTokenSource cancellationTokenSource = null)
+        public static async Task<MarketPlaceService> DeployContractAndGetServiceAsync(Web3 web3, MarketPlaceDeployment marketPlaceDeployment, CancellationTokenSource cancellationTokenSource = null)
         {
             var receipt = await DeployContractAndWaitForReceiptAsync(web3, marketPlaceDeployment, cancellationTokenSource);
             return new MarketPlaceService(web3, receipt.ContractAddress);
         }
 
-        protected Nethereum.Web3.Web3 Web3{ get; }
+        protected Web3 Web3 { get; }
 
         public ContractHandler ContractHandler { get; }
 
-        public MarketPlaceService(Nethereum.Web3.Web3 web3, string contractAddress)
+        public MarketPlaceService(Web3 web3, string contractAddress)
         {
             Web3 = web3;
             ContractHandler = web3.Eth.GetContractHandler(contractAddress);

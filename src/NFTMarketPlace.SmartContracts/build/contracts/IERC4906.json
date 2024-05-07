@@ -333,13 +333,13 @@
     "absolutePath": "@openzeppelin/contracts/interfaces/IERC4906.sol",
     "exportedSymbols": {
       "IERC165": [
-        2035
+        2725
       ],
       "IERC4906": [
         24
       ],
       "IERC721": [
-        1135
+        1825
       ]
     },
     "id": 25,
@@ -389,7 +389,7 @@
               "id": 8,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2035,
+              "referencedDeclaration": 2725,
               "src": "248:7:1"
             },
             "id": 9,
@@ -401,7 +401,7 @@
               "id": 10,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1135,
+              "referencedDeclaration": 1825,
               "src": "257:7:1"
             },
             "id": 11,
@@ -422,8 +422,8 @@
         "id": 24,
         "linearizedBaseContracts": [
           24,
-          1135,
-          2035
+          1825,
+          2725
         ],
         "name": "IERC4906",
         "nameLocation": "236:8:1",
@@ -567,13 +567,13 @@
     "absolutePath": "@openzeppelin/contracts/interfaces/IERC4906.sol",
     "exportedSymbols": {
       "IERC165": [
-        2035
+        2725
       ],
       "IERC4906": [
         24
       ],
       "IERC721": [
-        1135
+        1825
       ]
     },
     "id": 25,
@@ -623,7 +623,7 @@
               "id": 8,
               "name": "IERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2035,
+              "referencedDeclaration": 2725,
               "src": "248:7:1"
             },
             "id": 9,
@@ -635,7 +635,7 @@
               "id": 10,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1135,
+              "referencedDeclaration": 1825,
               "src": "257:7:1"
             },
             "id": 11,
@@ -656,8 +656,8 @@
         "id": 24,
         "linearizedBaseContracts": [
           24,
-          1135,
-          2035
+          1825,
+          2725
         ],
         "name": "IERC4906",
         "nameLocation": "236:8:1",
@@ -803,7 +803,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2024-04-15T13:19:16.153Z",
+  "updatedAt": "2024-05-07T10:44:17.138Z",
   "devdoc": {
     "events": {
       "BatchMetadataUpdate(uint256,uint256)": {

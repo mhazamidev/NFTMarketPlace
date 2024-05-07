@@ -14,4 +14,19 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="nethereum-gen.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>nethereum-gen.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="nethereum-gen.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>nethereum-gen.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
 </Project>
